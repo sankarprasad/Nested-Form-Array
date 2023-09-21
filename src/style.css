@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 1rem;
+  font-family: system-ui, sans-serif;
+  color: black;
+  background-color: white;
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+/* CSS stylesheet */
+.field-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-gap: 1rem;
+  border: 1px solid yellow;
+}
+
+.section-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-gap: 1rem;
+  grid-column: 1 / -1;
+  /* border: 1px solid red; */
+}
+.section-item {
+  grid-column: 1 / -1;
+}
+
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.action-panel-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.list-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  align-items: center;
+  grid-gap: 1rem;
+  font-family: Open Sans;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.form-panel .title {
+  font-family: Open Sans;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 0em;
+}
+
+.ant-collapse {
+  background-color: white;
+  border: none;
+}
+
+.ant-collapse > .ant-collapse-item {
+  box-shadow: 1px 0.5px 6px 0.5px #00000026;
+  box-shadow: 0px 0.25px 4px 0.25px rgba(0, 0, 0, 0.14902),
+    0px 0.25px 0.25px 1px rgba(0, 0, 0, 0.14902);
+}
+.ant-collapse-content {
+  border-top: none;
+}
+
+.form-action-panel {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 18px;
+}
+
+.form-action-panel > * {
+  width: initial !important;
+}
+
+.default-form-list-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+}
+
+.form-list-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+}
+
+.ant-collapse > .ant-collapse-item > .ant-collapse-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.submit {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.ant-switch {
+  height: 14px;
+}
+
+.ant-switch-checked .ant-switch-inner {
+  background-color: #1a7caf;
+  border-color: #1a7caf;
+}
+
+.ant-switch-handle {
+  top: -2px;
+}
+
+.ant-switch-handle::before {
+  outline: 2px solid #1a7caf;
+}
