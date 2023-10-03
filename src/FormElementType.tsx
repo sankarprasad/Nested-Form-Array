@@ -35,7 +35,7 @@ export enum FormElementType {
   FileUpload = 'fileupload',
   Slider = 'slider',
   AutoComplete = 'autocomplete',
-  Default = 'array',
+  Text = 'text',
 }
 
 export function getFieldElement({ formElement, handleFieldChange }) {

@@ -128,3 +128,33 @@ h1 {
 .ant-switch-handle::before {
   outline: 2px solid #1a7caf;
 }
+
+element {
+  border-radius: 5px;
+  border: 1px solid #e0e0e0;
+  background: #fff;
+}
+
+.ant-form-item-control-input-content > *:not(button) {
+  border-radius: 5px;
+  border: 1px solid #e0e0e0;
+  background: #fff;
+}
+
+.ant-form-item-control-input-content > *[disabled] {
+  border-radius: 5px;
+  border: 1px solid #e0e0e0;
+  background: #ececec;
+}
+
+.ant-form-item-label label {
+  color: #3f3f3f; /* critical - #990816*/
+
+  /* Forms/Form label */
+  font-family: Open Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 114.286% */
+  height: auto;
+}

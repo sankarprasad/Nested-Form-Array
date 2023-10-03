@@ -22,7 +22,7 @@ const generateSection = (id, parentId) => ({
       },
       rules: [
         {
-          required: true,
+          required: false,
           message: 'This is required',
         },
       ],
@@ -82,7 +82,7 @@ const generateSelectField = (id, parentId) => ({
   ],
   rules: [
     {
-      required: true,
+      required: false,
       message: 'This is required',
     },
   ],
@@ -107,7 +107,7 @@ const generateMultiSelectField = (id, parentId) => ({
   },
   rules: [
     {
-      required: true,
+      required: false,
       message: 'This is required',
     },
   ],
@@ -134,7 +134,7 @@ export const initialData1: any[] = [
         },
         rules: [
           {
-            required: true,
+            required: false,
             message: 'This is required',
           },
         ],
@@ -174,7 +174,7 @@ export const initialData1: any[] = [
         },
         rules: [
           {
-            required: true,
+            required: false,
             message: 'This is required',
           },
         ],
@@ -208,7 +208,7 @@ export const initialData1: any[] = [
     },
     rules: [
       {
-        required: true,
+        required: false,
         message: 'This is required',
       },
     ],
@@ -227,7 +227,7 @@ export const initialData1: any[] = [
     },
     rules: [
       {
-        required: true,
+        required: false,
         message: 'This is required',
       },
     ],
@@ -270,7 +270,7 @@ export const initialData1: any[] = [
     },
     rules: [
       {
-        required: true,
+        required: false,
         message: 'This is required',
       },
     ],
@@ -294,7 +294,7 @@ export const initialData1: any[] = [
     ],
     rules: [
       {
-        required: true,
+        required: false,
         message: 'This is required',
       },
     ],
@@ -313,7 +313,7 @@ export const initialData1: any[] = [
     },
     rules: [
       {
-        required: true,
+        required: false,
         message: 'This is required',
       },
     ],
@@ -332,7 +332,7 @@ export const initialData1: any[] = [
     },
     rules: [
       {
-        required: true,
+        required: false,
         message: 'This is required',
       },
     ],
@@ -403,6 +403,6 @@ export const initialData = (function generateRandomInitialData(count) {
     .fill(0)
     .reduce((acc, el) => {
       const newSectionId = uuid();
-      return [...acc, ...generateRowWithChildData(newSectionId, 3)];
+      return [...acc, ...generateRowWithChildData(newSectionId, 0)];
     }, []);
-})(3);
+})(2);

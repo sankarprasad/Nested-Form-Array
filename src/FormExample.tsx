@@ -58,13 +58,16 @@ const FormExample: FC<any> = ({
   };
 
   const renderElement = (node, props = {}) => {
+    const fieldPrefix = 'uniquePrefix_' + node.id.slice(0, 6);
+    // const fieldName = `${fieldPrefix}_${buildNestedName(node)}`;
+    const fieldName = `${node.id}__${node.name}`;
     return (
       <Form.Item
         className="row"
         label={node.name}
         id={node.id}
         rules={node.rules}
-        name={buildNestedName(node)}
+        name={fieldName}
         validateTrigger={['onChange', 'onBlur']}
         initialValue={node.elementProps.value}
         labelCol={{ span: 24 }}
@@ -139,7 +142,8 @@ const FormExample: FC<any> = ({
   );
 
   const renderField = (node) => (
-    <div className="field-item">
+    <div className="field-item" id={node.id}>
+      <pre>{node.id}</pre>
       <div>{renderElement(node)}</div>
     </div>
   );
@@ -183,7 +187,7 @@ const FormExample: FC<any> = ({
 
   const onFinish = (values) => {
     console.log(values);
-    onSubmit(values);
+    onSubmit(Object.values(values));
   };
 
   const onFinishFailed = (errorInfo: any) => {
@@ -207,6 +211,7 @@ const FormExample: FC<any> = ({
 
       counts[prefix] += errors[key].length;
     }
+    console.log(counts);
     setErrorData(counts);
   };
 
